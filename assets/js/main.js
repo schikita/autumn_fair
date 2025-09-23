@@ -272,3 +272,18 @@ if (projectsCarousel) {
 
   updateProjectsCarousel();
 }
+
+// Показать подсказку о прокрутке на мобильных устройствах
+        if (window.innerWidth <= 768) {
+            document.querySelector('.scroll-hint').style.display = 'block';
+        }
+        
+        // Скрыть подсказку при изменении размера окна
+        window.addEventListener('resize', function() {
+            const hint = document.querySelector('.scroll-hint');
+            if (window.innerWidth > 768) {
+                hint.style.display = 'none';
+            } else {
+                hint.style.display = 'block';
+            }
+        });
