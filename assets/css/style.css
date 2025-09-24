@@ -394,75 +394,8 @@ h1 {
   opacity: 0.8;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  /*.hero-container {
-    gap: 40px;
-  }
-
-  .hero-images {
-    height: 400px;
-  }*/
-}
-
-@media (max-width: 768px) {
- /* .hero {
-    padding: 20px 5%;
-  }
-
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .hero-images {
-    height: 350px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .hero-image:first-child {
-    grid-column: 1;
-  }
-
-  .hero-stats {
-    justify-content: center;
-  }*/
-}
-
-@media (max-width: 480px) {
- /* .hero-images {
-    height: 300px;
-    gap: 15px;
-  }
-
-  .stat-item {
-    min-width: 100px;
-    padding: 15px;
-  }
-
-  .stat-number {
-    font-size: 1.5rem;
-  }
-}
-
-.hero-photos {
-  position: relative;
-  width: 650px;
-  height: 500px;
-}
-
-.hero-photos img {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;*/
-}
 
 /* Hover-эффект */
-
 
 .hero-photos img:hover {
   transform: scale(1.05);
@@ -537,6 +470,10 @@ h1 {
   height: 30px;
   fill: var(--burgundy);
   opacity: 0.8;
+}
+
+.cta {
+  display: none;
 }
 
 /* ====  Where target ==== */
@@ -657,12 +594,12 @@ h1 {
 
 /* City Tabs */
 .city-tabs {
-  text-align: center;
+ text-align: center;
   margin-bottom: 25px;
-  display: flex;
+  /*display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 10px;*/
 }
 
 .city-tabs .tab {
@@ -1270,6 +1207,12 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 3px solid rgba(230, 126, 34, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-item:nth-child(3n + 1) {
@@ -2158,6 +2101,8 @@ html {
 }
 
 
+
+
 /* ===== ПЛАНШЕТНАЯ ВЕРСИЯ (768px - 1024px) ===== */
 @media (max-width: 1024px) and (min-width: 769px) {
   /* Навигация */
@@ -2388,7 +2333,7 @@ html {
 
   .hero-subtitle {
     font-size: clamp(1.1rem, 4vw, 1.3rem);
-    margin-bottom: 30px;
+    margin-bottom: 120px;
     padding: 0 15px;
   }
 
@@ -2398,11 +2343,28 @@ html {
     flex-wrap: wrap;
   }
 
+   .hero-photos {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-photos img {
+    width: 70%;
+    max-width: 100px;
+    height: auto;
+  }
+
+
   .hero-images {
     order: 2;
     height: 300px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 12px;
   }
 
@@ -2413,6 +2375,12 @@ html {
 
   .hero-image img {
     border-radius: 12px;
+
+  }
+
+  /* === Table ===*/
+  .cta {
+    display: none;
   }
 
   /* Who Target секция */
@@ -2469,30 +2437,28 @@ html {
   }
 
   /* City Tabs */
-  .city-tabs {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    margin-bottom: 25px;
+
+
+
+   .city-buttons {
+    flex-direction: row;              /* горизонтально */
+    overflow-x: auto;                 /* горизонтальный скролл */
+    gap: 10px;
+    padding-bottom: 10px;
   }
 
-  .city-tabs .tab {
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 1rem;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgba(229, 255, 0, 0.3);
-    backdrop-filter: blur(15px);
+  .city-buttons::-webkit-scrollbar {
+    height: 6px;                      /* делаем тонкий скролл */
   }
-
-  .city-tabs .tab.active {
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-    border-color: #e5ff00;
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.6);
+  .city-buttons::-webkit-scrollbar-thumb {
+    background: #ff9900;
+    border-radius: 3px;
   }
-
+  .city-buttons button {
+    flex: 0 0 auto;                   /* фикс ширина, не сжимаются */
+    font-size: 16px;
+    min-width: 120px;
+  }
   /* Секции контента */
   .section {
     padding: 60px 4%;
@@ -2848,34 +2814,14 @@ html {
   }
 
   /* Who Target */
-  .overlay {
-    padding: 25px 15px;
+   .who-target {
+    display: none;
   }
 
-  .titles h2 {
-    font-size: clamp(1.4rem, 7vw, 1.8rem);
-    padding: 10px 15px;
+  .cta {
+    display: block;
   }
 
-  .who-text {
-    padding: 20px 15px;
-    font-size: 15px;
-  }
-
-  .who-map {
-    min-height: 280px;
-    margin: 0 -10px;
-  }
-
-  .who-map iframe {
-    height: 280px !important;
-    min-height: 280px;
-  }
-
-  .city-tabs .tab {
-    padding: 12px 15px;
-    font-size: 0.95rem;
-  }
 
   /* Контент секции */
   .section {
@@ -2911,7 +2857,7 @@ html {
   }
 
   .markets-table {
-    min-width: 550px;
+    min-width: 600px;
     font-size: 0.85rem;
   }
 
@@ -2969,6 +2915,10 @@ html {
 
   .titles h2 {
     font-size: 1.3rem;
+  }
+
+  .who-target {
+    display: none;
   }
 
   .who-map {
@@ -3040,4 +2990,55 @@ html {
       box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
     }
   }
+}
+
+
+/* ==== ПРОМЕЖ ВЕРСИЯ от 1240 и мнее ====*/
+
+@media (max-width: 1240px) and (min-width: 762px) {
+    .hero-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 1;
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom: 120px;
+    padding: 0 15px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+   .hero-photos {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-photos img {
+    width: 70%;
+    max-width: 100px;
+    height: auto;
+  }
+
 }
