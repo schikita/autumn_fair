@@ -287,3 +287,38 @@ if (projectsCarousel) {
                 hint.style.display = 'block';
             }
         });
+
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    // переключаем табы
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // показываем текст города
+    document.querySelectorAll('.city-text').forEach(ct => ct.classList.remove('active'));
+    document.getElementById(tab.dataset.city).classList.add('active');
+
+    // подгрузка карты (пример — можно разные ссылки подставить)
+    const map = document.getElementById('city-map');
+    if (tab.dataset.city === 'minsk') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Aadc79dafd8631f45bafdaa4219e0b6c2a457be4886bbb3899de9ded7b3369755&amp;source=constructor";
+    } else if (tab.dataset.city === 'grodno') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3A9145cb9857a44c85359a82ef2c9e60fe5915fcafbfa107c0d092cdb412ee88ee&amp;source=constructor";
+    } else if (tab.dataset.city === 'mogilev') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Ae5329dea583b985d13186311f66daeff5d0f1e14f32f4500c9a34764b82fcc6b&amp;source=constructor";
+    }
+    else if (tab.dataset.city === 'brest') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Afb1752039c60db7e5d6f32f2a3ca02cd6425ff09ada5e6c9ef0e9542c58f0013&amp;source=constructor";
+    } 
+    else if (tab.dataset.city === 'gomel') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Aa72ce11f8168b741186b295ffd689b3c036a70097f53394a839ffde76ce96076&amp;source=constructor";
+    }
+    else if (tab.dataset.city === 'vitebsk') {
+      map.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Adbb544ca53a58c5fa75f68740fe1d232174698c19435345183ef502813f6ddb2&amp;source=constructor";
+    }
+
+
+    
+  });
+});
