@@ -28,7 +28,7 @@
                 <li><a href="#target">Где проходят ярмарки?</a></li>
                 <li><a href="#prices">Что и почем?</a></li>
                 <li><a href="#testimonials">Слово продавцам</a></li>
-                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#deliv">Доставка</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -359,7 +359,6 @@
         <h2 class="section-title">Слово продавцам</h2>
         <div class="story-container">
             <div class="story-text">
-                <h3>Фермер Илья Хрипачев</h3>
                 <div class="quote-box">
                     <p>
                         «Привезли все, что надо для борща. У нас личное подсобное хозяйство, земли – около пяти
@@ -380,51 +379,59 @@
         </div>
     </section>
 
-
-    
-
     <!-- Gallery Section -->
     <section class="section section-gradient" id="gallery">
         <h2 class="section-title">Атмосфера ярмарки</h2>
-        <div class="gallery-grid">
+        <div class="gallery-wrapper">
 
-            <div class="gallery-item">
-                <img src="./assets/img/ov-row.jpg" alt="Овощные ряды">
-                <div class="gallery-caption">
-                    <h3>Овощные ряды</h3>
-                    <p>70 метров торговых рядов с самыми свежими овощами</p>
-                </div>
+            <!-- Левая колонка с видео -->
+            <div class="gallery-video">
+                <video controls playsinline>
+                    <source src="./assets/video/vid-2.mp4" type="video/mp4"/>
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
 
-            <div class="gallery-item">
-                <img src="./assets/img/solenja.jpg" alt="Домашние соленья">
-                <div class="gallery-caption">
-                    <h3>Домашние соленья</h3>
-                    <p>Квашеная капуста, соленые огурчики, маринованный чеснок</p>
+            <!-- Правая колонка с сеткой фото -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./assets/img/ov-row.jpg" alt="Овощные ряды" />
+                    <div class="gallery-caption">
+                        <h3>Овощные ряды</h3>
+                        <p>70 метров торговых рядов с самыми свежими овощами</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="gallery-item">
-                <img src="./assets/img/meat.jpg" alt="Мясные деликатесы">
-                <div class="gallery-caption">
-                    <h3>Мясные деликатесы</h3>
-                    <p>Свежее мясо и домашние колбаски по народным рецептам</p>
+                <div class="gallery-item">
+                    <img src="./assets/img/solenja.jpg" alt="Домашние соленья" />
+                    <div class="gallery-caption">
+                        <h3>Домашние соленья</h3>
+                        <p>Квашеная капуста, соленые огурчики, маринованный чеснок</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="gallery-item">
-                <img src="./assets/img/honey.jpg" alt="Медовые ряды">
-                <div class="gallery-caption">
-                    <h3>Медовые ряды</h3>
-                    <p>Липовый, гречишный, майский мед от потомственных пчеловодов</p>
+                <div class="gallery-item">
+                    <img src="./assets/img/meat.jpg" alt="Мясные деликатесы" />
+                    <div class="gallery-caption">
+                        <h3>Мясные деликатесы</h3>
+                        <p>Свежее мясо и домашние колбаски по народным рецептам</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="gallery-item">
-                <img src="./assets/img/mushrooms.jpg" alt="Ягоды">
-                <div class="gallery-caption">
-                    <h3>Свежие ягоды</h3>
-                    <p>Сочные ягоды – дары белорусской земли</p>
+                <div class="gallery-item">
+                    <img src="./assets/img/honey.jpg" alt="Медовые ряды" />
+                    <div class="gallery-caption">
+                        <h3>Медовые ряды</h3>
+                        <p>Липовый, гречишный, майский мед от потомственных пчеловодов</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./assets/img/mushrooms.jpg" alt="Свежие ягоды" />
+                    <div class="gallery-caption">
+                        <h3>Свежие ягоды</h3>
+                        <p>Сочные ягоды – дары белорусской земли</p>
+                    </div>
                 </div>
             </div>
 
@@ -445,7 +452,7 @@
                 <div class="testimonial-author">Николай Козлов</div>
                 <div class="testimonial-role">Постоянный покупатель</div>
             </div>
-           
+
             <div class="testimonial-slide">
                 <p class="testimonial-text">
                     "Не все знают: чтобы мед принес пользу организму, его нужно правильно есть. Сначала следует выпить
@@ -463,7 +470,7 @@
                 </p>
                 <div class="testimonial-author">Тамара Ивановна</div>
                 <div class="testimonial-role">Пенсионерка</div>
-            </div>       
+            </div>
         </div>
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(1)"></span>
@@ -475,31 +482,30 @@
     </section>
 
     <!-- Info Cards Section -->
-    <section class="section section-dark">
+    <section class="section section-dark" id="deliv">
         <h2 class="section-title">Полезная информация</h2>
-        <div class="info-cards">           
-        <div class="note-wrapper">
-            <h3 class="note-title">КСТАТИ</h3>
-            <p>
-                В Минтруда рассказали, что покупки на дом пожилым людям и инвалидам могут доставить,
-                и пояснили, что для этого нужно сделать. Для получения помощи достаточно связаться со своим
-                территориальным центром социального обслуживания населения.
-            </p>
-            <p>
-                Те, кто проживает в Минске, могут позвонить на короткий номер <strong>139</strong>.
-                При обращении необходимо оставить заявку. Специалисты центра примут её и сообщат,
-                в какое время будет осуществляться подвоз.
-            </p>
-            <p>
-                В день ярмарки можно найти на её территории волонтера. Чаще всего это представители
-                <strong>БРСМ</strong> в яркой форме. Он сопроводит пожилого человека, загрузит его покупки
-                в автомобиль и отвезет по названному адресу.
-            </p>
-            <p>
-                В Минтруда подчеркивают: <strong>вся помощь абсолютно бесплатна</strong>.
-                Не придется платить ни за доставку, ни за услуги волонтеров.
-            </p>
-        </div>
+        <div class="info-cards">
+            <div class="note-wrapper">
+                <p>
+                    В Минтруда рассказали, что покупки на дом пожилым людям и инвалидам могут доставить,
+                    и пояснили, что для этого нужно сделать. Для получения помощи достаточно связаться со своим
+                    территориальным центром социального обслуживания населения.
+                </p>
+                <p>
+                    Те, кто проживает в Минске, могут позвонить на короткий номер <strong>139</strong>.
+                    При обращении необходимо оставить заявку. Специалисты центра примут её и сообщат,
+                    в какое время будет осуществляться подвоз.
+                </p>
+                <p>
+                    В день ярмарки можно найти на её территории волонтера. Чаще всего это представители
+                    <strong>БРСМ</strong> в яркой форме. Он сопроводит пожилого человека, загрузит его покупки
+                    в автомобиль и отвезет по названному адресу.
+                </p>
+                <p>
+                    В Минтруда подчеркивают: <strong>вся помощь абсолютно бесплатна</strong>.
+                    Не придется платить ни за доставку, ни за услуги волонтеров.
+                </p>
+            </div>
         </div>
     </section>
 

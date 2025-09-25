@@ -234,7 +234,7 @@ nav.scrolled {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/bg-1.png') no-repeat center center / cover;
+  background: url('../img/ov-row.jpg') no-repeat center center / cover;
   z-index: -1;
 }
 
@@ -1210,21 +1210,49 @@ h1 {
 }
 
 /* Gallery */
+/* Основной контейнер галереи */
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  align-items: start;
+}
+.gallery-video {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid rgba(230, 126, 34, 0.3);
+  box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+  aspect-ratio: 9 / 16;  /* более стандартное соотношение */
+  width: 100%;
+  height: 80vh;
+  max-height: none;
+}
+
+.gallery-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* обрезает лишнее и заполняет */
+  display: block;
+  border-radius: 15px;
+}
+
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 60px;
 }
+
 
 .gallery-item {
   position: relative;
-  height: 250px;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 3px solid rgba(230, 126, 34, 0.3);
+  height: 250px;
 }
 
 .gallery-item img {
@@ -2919,6 +2947,24 @@ html {
     right: 15px;
     bottom: 15px;
   }
+
+    .gallery-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery-video {
+    max-height: none;     /* убираем фиксированную высоту */
+    aspect-ratio: auto;   /* сброс aspect-ratio */
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-video video {
+    width: 100%;
+    height: auto;         /* видео само задаёт высоту */
+    display: block;
+  }
 }
 
 /* ===== ЭКСТРА МАЛЕНЬКИЕ ЭКРАНЫ (до 320px) ===== */
@@ -2959,6 +3005,24 @@ html {
     min-width: 480px;
     font-size: 0.8rem;
   }
+
+.gallery-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery-video {
+    max-height: none;       /* убираем ограничение */
+    aspect-ratio: auto;     /* сбрасываем */
+    width: 100%;            /* адаптивно */
+    height: auto;           /* высота по контенту */
+  }
+
+  .gallery-video video {
+    width: 100%;
+    height: auto;           /* сохраняем пропорции */
+    display: block;
+  }
 }
 
 /* ===== ДОПОЛНИТЕЛЬНЫЕ АНИМАЦИИ И ЭФФЕКТЫ ===== */
@@ -2992,7 +3056,7 @@ html {
   .feature-card:active,
   .project-card:active {
     transform: scale(0.98);
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease;    
   }
 
   /* Пульсирующая анимация для важных элементов */
@@ -3060,3 +3124,5 @@ html {
   }
 
 }
+
+

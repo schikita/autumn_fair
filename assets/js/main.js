@@ -88,7 +88,7 @@ function showSlide(n) {
 setInterval(() => {
   slideIndex++;
   showSlide(slideIndex);
-}, 5000);
+}, 8000);
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -251,7 +251,7 @@ if (projectsCarousel) {
   function goNext() {
     projectIndex++;
     if (projectIndex > projectSlides.length - slidesToShow()) {
-      projectIndex = 0; // возвращаемся в начало
+      projectIndex = 0; 
     }
     updateProjectsCarousel();
   }
