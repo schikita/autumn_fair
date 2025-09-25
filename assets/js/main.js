@@ -324,3 +324,16 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
 
+document.querySelectorAll('.scroll-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const isMobile = window.innerWidth <= 768; // условие для мобилы
+    const targetId = isMobile ? '#contact' : '#target';
+
+    const targetEl = document.querySelector(targetId);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
