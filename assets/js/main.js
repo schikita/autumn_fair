@@ -323,17 +323,34 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-
 document.querySelectorAll('.scroll-btn').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
 
-    const isMobile = window.innerWidth <= 768; // условие для мобилы
+    const isMobile = window.innerWidth <= 768;
+    const targetId = isMobile ? '#contact' : '#target'; // на мобилке -> таблица
+
+    const targetEl = document.querySelector(targetId);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+document.querySelectorAll('a[href="#target"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const isMobile = window.innerWidth <= 768;
     const targetId = isMobile ? '#contact' : '#target';
 
     const targetEl = document.querySelector(targetId);
     if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    // закрыть бургер-меню, если открыто
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
   });
 });

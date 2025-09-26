@@ -25,9 +25,10 @@
                 <span class="logo-text">SB.BY</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#target">Где проходят ярмарки?</a></li>
+                <li class="desktop-only"><a href="#target">Где проходят ярмарки?</a></li>
+                <li class="mobile-only"><a href="#contact">Где проходят ярмарки?</a></li>
                 <li><a href="#prices">Что и почем?</a></li>
-                <li><a href="#testimonials">Слово продавцам</a></li>
+                <li><a href="#sellers">Слово продавцам</a></li>
                 <li><a href="#deliv">Доставка</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -61,9 +62,9 @@
             </div>
 
         </div>
-
         <div class="scroll-indicator">
             <a href="#target" class="scroll-btn desktop-only">Читать репортаж</a>
+            <a href="#contact" class="scroll-btn mobile-only">Читать репортаж</a>
         </div>
 
     </section>
@@ -168,16 +169,12 @@
         </div>
     </section>
 
-
-
-
     <section class="who-target" id="target">
         <div class="overlay">
             <div class="titles">
                 <h2>Где проходят ярмарки?</h2>
             </div>
 
-            <!-- Табы -->
             <div class="city-tabs">
                 <button class="tab active" data-city="minsk">Минск</button>
                 <button class="tab" data-city="grodno">Гродно</button>
@@ -188,7 +185,6 @@
             </div>
 
             <div class="who-container">
-                <!-- Тексты -->
                 <div class="who-text">
                     <div class="city-text active" id="minsk">
                         <p class="city"><strong>В Минске</strong></p>
@@ -258,7 +254,6 @@
                     </div>
                 </div>
 
-                <!-- Карта -->
                 <div class="who-map">
                     <iframe id="city-map"
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3Aadc79dafd8631f45bafdaa4219e0b6c2a457be4886bbb3899de9ded7b3369755&amp;source=constructor"
@@ -268,37 +263,32 @@
         </div>
     </section>
 
-
-    <!-- Prices Section -->
     <section class="section section-dark" id="prices">
         <h2 class="section-title">Приятные цены на любой кошелек</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; opacity: 0.8;">
-            На ярмарке у "Чижовка-Арены" цены радуют каждого покупателя. От свежих овощей до домашних солений - все по
+            На ярмарке у "Чижовка-Арены" цены радуют каждого покупателя. От свежих овощей до домашних солений — все по
             доступным ценам прямо от производителей.
         </p>
+
         <div class="price-grid">
+            <!-- Овощи -->
             <div class="price-card">
                 <h3>🥔 Овощи</h3>
                 <ul class="price-list">
-                    <li><span class="product-name">Картофель крупный</span><span class="product-price">1.2-1.3
+                    <li><span class="product-name">Картофель крупный</span><span class="product-price">1.2–1.3
                             BYN/кг</span></li>
                     <li><span class="product-name">Картофель мелкий</span><span class="product-price">0.70 BYN/кг</span>
                     </li>
                     <li><span class="product-name">Морковь</span><span class="product-price">1.2 BYN/кг</span></li>
                     <li><span class="product-name">Лук</span><span class="product-price">2 BYN/кг</span></li>
-                    <li><span class="product-name">Перец</span><span class="product-price">2.5-6.5 BYN/кг</span></li>
+                    <li><span class="product-name">Перец</span><span class="product-price">2.5–6.5 BYN/кг</span></li>
                     <li><span class="product-name">Баклажаны</span><span class="product-price">4.5 BYN/кг</span></li>
                     <li><span class="product-name">Капуста</span><span class="product-price">0.71 BYN/кг</span></li>
                     <li><span class="product-name">Кабачки</span><span class="product-price">2 BYN/кг</span></li>
                     <li><span class="product-name">Тыква</span><span class="product-price">1.43 BYN/кг</span></li>
+                    <li><span class="product-name">Помидоры</span><span class="product-price">3.8–9 BYN/кг</span></li>
                 </ul>
-            </div>
-            <div class="price-card">
-                <h3>🍅 Томаты и перец</h3>
-                <ul class="price-list">
-                    <li><span class="product-name">Помидоры</span><span class="product-price">3.8-9 BYN/кг</span></li>
-                </ul>
-                <br><br><br><br>
+
                 <h3>🥬 Зелень и салаты</h3>
                 <ul class="price-list">
                     <li><span class="product-name">Укроп</span><span class="product-price">1.5 BYN/кг</span></li>
@@ -307,12 +297,13 @@
                 </ul>
             </div>
 
+            <!-- Соленья -->
             <div class="price-card">
                 <h3>🥒 Соленья и заготовки</h3>
                 <ul class="price-list">
-                    <li><span class="product-name">Квашеная капуста</span><span class="product-price">3.83-8
+                    <li><span class="product-name">Квашеная капуста</span><span class="product-price">3.83–8
                             BYN/кг</span></li>
-                    <li><span class="product-name">Огурцы соленые</span><span class="product-price">8-12 BYN/кг</span>
+                    <li><span class="product-name">Огурцы соленые</span><span class="product-price">8–12 BYN/кг</span>
                     </li>
                     <li><span class="product-name">Помидоры маринованные</span><span class="product-price">10
                             BYN/кг</span></li>
@@ -322,6 +313,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Грибы и ягоды -->
             <div class="price-card">
                 <h3>🍄 Грибы и ягоды</h3>
                 <ul class="price-list">
@@ -333,6 +326,8 @@
                     <li><span class="product-name">Клюква</span><span class="product-price">9.88 BYN/кг</span></li>
                 </ul>
             </div>
+
+            <!-- Мясо -->
             <div class="price-card">
                 <h3>🥩 Мясная продукция</h3>
                 <ul class="price-list">
@@ -350,34 +345,35 @@
                             BYN/кг</span></li>
                 </ul>
             </div>
+
+            <!-- Мед -->
+            <div class="price-card">
+                <h3>🍯 Мед</h3>
+                <ul class="price-list">
+                    <li><span class="product-name">Перга</span><span class="product-price">18 BYN/л</span></li>
+                    <li><span class="product-name">Донниковый</span><span class="product-price">18 BYN/л</span></li>
+                    <li><span class="product-name">Лесное разнотравье</span><span class="product-price">18 BYN/л</span>
+                    </li>
+                    <li><span class="product-name">Кипрейный</span><span class="product-price">18 BYN/л</span></li>
+                    <li><span class="product-name">Майский</span><span class="product-price">18 BYN/л</span></li>
+                </ul>
+            </div>
+
+            <!-- Фрукты -->
+            <div class="price-card">
+                <h3>🍎 Фрукты</h3>
+                <ul class="price-list">
+                    <li><span class="product-name">Виноград</span><span class="product-price">5.70 BYN/кг</span></li>
+                    <li><span class="product-name">Груша</span><span class="product-price">5.80 BYN/кг</span></li>
+                    <li><span class="product-name">Яблоки</span><span class="product-price">4.50 BYN/кг</span></li>
+                </ul>
+            </div>
         </div>
     </section>
 
 
-    <!-- Stories Section -->
-    <section class="section section-gradient" id="stories">
-        <h2 class="section-title">Слово продавцам</h2>
-        <div class="story-container">
-            <div class="story-text">
-                <div class="quote-box">
-                    <p>
-                        «Привезли все, что надо для борща. У нас личное подсобное хозяйство, земли – около пяти
-                        гектаров.
-                        Выращиваем перец, баклажаны, помидоры, разные виды капусты, морковь, лук, свеклу.
-                        Все это и предлагаем посетителям. На ярмарке работаем не первый год. Что привлекает?
-                        Толковая организация, можно спокойно приехать, без проблем занять место.
-                        Да и поток посетителей хороший – очереди выстраиваются».
-                    </p>
-                    <p style="text-align: right; color: var(--accent); font-weight: 700;">
-                        — Илья Хрипачев, Слуцкий район
-                    </p>
-                </div>
-            </div>
-            <div class="story-image">
-                <img src="./assets/img/ilja-hripachev.jpg" alt="Фермер Илья Хрипачев">
-            </div>
-        </div>
-    </section>
+
+
 
     <!-- Gallery Section -->
     <section class="section section-gradient" id="gallery">
@@ -387,7 +383,7 @@
             <!-- Левая колонка с видео -->
             <div class="gallery-video">
                 <video controls playsinline>
-                    <source src="./assets/video/vid-2.mp4" type="video/mp4"/>
+                    <source src="./assets/video/vid-2.mp4" type="video/mp4" />
                     Ваш браузер не поддерживает видео.
                 </video>
             </div>
@@ -395,7 +391,7 @@
             <!-- Правая колонка с сеткой фото -->
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="./assets/img/ov-row.jpg" alt="Овощные ряды" />
+                    <img src="./assets/img/ov-row.jpg" alt="Овощные ряды" loading="lazy" />
                     <div class="gallery-caption">
                         <h3>Овощные ряды</h3>
                         <p>70 метров торговых рядов с самыми свежими овощами</p>
@@ -403,7 +399,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="./assets/img/solenja.jpg" alt="Домашние соленья" />
+                    <img src="./assets/img/solenja.jpg" alt="Домашние соленья" loading="lazy" />
                     <div class="gallery-caption">
                         <h3>Домашние соленья</h3>
                         <p>Квашеная капуста, соленые огурчики, маринованный чеснок</p>
@@ -411,7 +407,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="./assets/img/meat.jpg" alt="Мясные деликатесы" />
+                    <img src="./assets/img/meat.jpg" alt="Мясные деликатесы" loading="lazy" />
                     <div class="gallery-caption">
                         <h3>Мясные деликатесы</h3>
                         <p>Свежее мясо и домашние колбаски по народным рецептам</p>
@@ -419,7 +415,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="./assets/img/honey.jpg" alt="Медовые ряды" />
+                    <img src="./assets/img/honey.jpg" alt="Медовые ряды" loading="lazy" />
                     <div class="gallery-caption">
                         <h3>Медовые ряды</h3>
                         <p>Липовый, гречишный, майский мед от потомственных пчеловодов</p>
@@ -427,7 +423,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="./assets/img/mushrooms.jpg" alt="Свежие ягоды" />
+                    <img src="./assets/img/mushrooms.jpg" alt="Свежие ягоды" loading="lazy" />
                     <div class="gallery-caption">
                         <h3>Свежие ягоды</h3>
                         <p>Сочные ягоды – дары белорусской земли</p>
@@ -440,38 +436,100 @@
 
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <h2 class="section-title">Что говорят покупатели</h2>
+    <section class="testimonials" id="sellers">
+        <h2 class="section-title">Слово продавцам</h2>
         <div class="testimonials-slider">
+
             <div class="testimonial-slide active">
-                <p class="testimonial-text">
-                    "Пришел просто за картошкой, а уезжаю с полным багажником – и капуста, и свекла про запас, и даже
-                    домашние соленья прихватил! Цены радуют, все свежее, продавцы приветливые, расскажут, покажут, еще и
-                    рецептом поделятся. Атмосфера как на празднике!"
-                </p>
-                <div class="testimonial-author">Николай Козлов</div>
-                <div class="testimonial-role">Постоянный покупатель</div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        «Привезли все, что надо для борща. У нас личное подсобное хозяйство, земли – около пяти
+                        гектаров.
+                        Выращиваем перец, баклажаны, помидоры, разные виды капусты, морковь, лук, свеклу.
+                        Все это и предлагаем посетителям. На ярмарке работаем не первый год. Что привлекает?
+                        Толковая организация, можно спокойно приехать, без проблем занять место.
+                        Да и поток посетителей хороший – очереди выстраиваются».
+                    </p>
+                    <div class="testimonial-author">Илья Хрипачев</div>
+                    <div class="testimonial-role">Фермер, Слуцкий район</div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./assets/img/ilja-hripachev.jpg" loading="lazy" alt="Фермер Илья Хрипачев">
+                </div>
             </div>
 
             <div class="testimonial-slide">
-                <p class="testimonial-text">
-                    "Не все знают: чтобы мед принес пользу организму, его нужно правильно есть. Сначала следует выпить
-                    стакан воды, минут через 5–10 можно рассосать ложечку меда. Потом полтора-два часа лучше не есть.
-                    Пчелопродукты стоит принимать каждый день по чуть-чуть на протяжении 11 месяцев."
-                </p>
-                <div class="testimonial-author">Анатолий Тупилов</div>
-                <div class="testimonial-role">Потомственный пчеловод, стаж 57 лет</div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        «Продаю кукурузу, как на море! Такую же сладкую. Все, что выращиваю, привез на продажу,
+                        в основном это овощи. Капусту предлагаю по рублю за килограмм, картошку – 1,2 рубля.
+                        В этом году она выросла неплохая, но и спрос тоже высокий».
+                    </p>
+                    <div class="testimonial-author">Иван Катько</div>
+                    <div class="testimonial-role">Владелец ЛПХ, Пуховичский район</div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./assets/img/Иван Катько.jpg" loading="lazy" alt="Иван Катько">
+                </div>
             </div>
+
             <div class="testimonial-slide">
-                <p class="testimonial-text">
-                    "Очень нравится ярмарка: выбор отличный, цены адекватные, без накруток. Куплю 8 кило мяса, потом
-                    овощей. Дети и внуки любят мои закатки: кабачки, перцы, томаты, огурцы, чеснок. На ярмарки хожу всей
-                    семьей."
-                </p>
-                <div class="testimonial-author">Тамара Ивановна</div>
-                <div class="testimonial-role">Пенсионерка</div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        «Помогаем родителям продать то, что они вырастили сами. Сегодня у нас в помощниках наш сын
+                        Дмитрий,
+                        привлекает покупателей своей непосредственностью. Конечно, ярмарки – это выгодно для тех, кто
+                        сам выращивает
+                        овощи или фрукты. Семья участвует в такой торговле уже лет десять, есть покупатели, которые нас
+                        знают
+                        и любят нашу продукцию. И даже много километров пути не кажутся трудными, когда знаешь, что тебя
+                        здесь ждут».
+                    </p>
+                    <div class="testimonial-author">Алена и Николай Скребец</div>
+                    <div class="testimonial-role">Фермеры, Столинский район</div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./assets/img/Алени и николай скребец.jpg" loading="lazy" alt="Алена и Николай Скребец">
+                </div>
             </div>
+
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        «Не все знают: чтобы мед принес пользу организму, его нужно правильно есть.
+                        Сначала следует выпить стакан воды, минут через 5–10 можно рассосать ложечку меда.
+                        Потом полтора-два часа лучше не есть. Пергу не употребляют на ночь – тяжелый продукт.
+                        Ее тоже много не надо. Пчелопродукты стоит принимать каждый день по чуть-чуть
+                        на протяжении 11 месяцев, а потом на месяц сделать перерыв.
+                        Если закупка будет оптовая, с доставкой обязательно помогу».
+                    </p>
+                    <div class="testimonial-author">Анатолий Тупилов</div>
+                    <div class="testimonial-role">Пчеловод</div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./assets/img/пчеловод.jpg" loading="lazy" alt="Анатолий Тупилов">
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        «В 4 утра начали расставлять палатку, а к половине седьмого уже пошли первые покупатели.
+                        Самое вкусное разобрали моментально — огурцы, помидоры, фасоль, чеснок, картофель, мед.
+                        Картошка, кабачки — по рублю. За два часа раскупили все овощи. Очень вкусные, экологически
+                        чистые.
+                        Покупатели нацелены приобретать на выставке натуральное, собранное в огороде».
+                    </p>
+                    <div class="testimonial-author">Татьяна Демидович</div>
+                    <div class="testimonial-role">Продавец «Коопзаготпром», Ивацевичский район</div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./assets/img/Татьяна Демидович.jpg" loading="lazy" alt="Татьяна Демидович">
+                </div>
+            </div>
+
         </div>
+
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -480,6 +538,7 @@
             <span class="dot" onclick="currentSlide(5)"></span>
         </div>
     </section>
+
 
     <!-- Info Cards Section -->
     <section class="section section-dark" id="deliv">
@@ -523,7 +582,7 @@
                 <div class="carousel-track">
 
                     <a href="https://www.sb.by/sp/bear-hunting/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/hunting.png" alt="Охота на медведя">
+                        <img src="./assets/img/projects/hunting.png" loading="lazy" alt="Охота на медведя">
                         <div class="project-info">
                             <h3>Охота на медведя</h3>
                             <p>Как корреспондент СБ отправился на медведя</p>
@@ -531,7 +590,7 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/voencore2025/index.html" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/voencore.jpg" alt="Военкор-2025">
+                        <img src="./assets/img/projects/voencore.jpg" loading="lazy" alt="Военкор-2025">
                         <div class="project-info">
                             <h3>Военкор-2025</h3>
                             <p>Глазами журналиста на передовой</p>
@@ -539,7 +598,7 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/school/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/scool.jpg" alt="Идем в школу">
+                        <img src="./assets/img/projects/scool.jpg" loading="lazy" alt="Идем в школу">
                         <div class="project-info">
                             <h3>Идем в школу</h3>
                             <p>Чем удивляют новые школы в Беларуси?</p>
@@ -547,7 +606,7 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/trafficrules/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/PDD.jpg" alt="НОВШЕСТВА ПДД">
+                        <img src="./assets/img/projects/PDD.jpg" loading="lazy" alt="НОВШЕСТВА ПДД">
                         <div class="project-info">
                             <h3>НОВШЕСТВА ПДД</h3>
                             <p>Что нового в правилах дорожного движения?</p>
@@ -555,7 +614,7 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/parad/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/hero-1.jpg" alt="Военный парад">
+                        <img src="./assets/img/projects/hero-1.jpg" loading="lazy" alt="Военный парад">
                         <div class="project-info">
                             <h3>Военный парад в Китае</h3>
                             <p>80-летие завершения Второй мировой войны</p>
@@ -563,14 +622,14 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/adaptacia/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/006.jpg" alt="Адаптация">
+                        <img src="./assets/img/projects/006.jpg" loading="lazy" alt="Адаптация">
                         <div class="project-info">
                             <h3>Адаптация в общежитиях</h3>
                             <p>Как адаптируются первокурсники</p>
                         </div>
                     </a>
                     <a href="https://www.sb.by/sp/miting/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/text-2.JPG" alt="БЕРЕЗА-КАРТУЗСКАЯ проект">
+                        <img src="./assets/img/projects/text-2.JPG" loading="lazy" alt="БЕРЕЗА-КАРТУЗСКАЯ проект">
                         <div class="project-info">
                             <h3>БЕРЕЗА-КАРТУЗСКАЯ</h3>
                             <p>ВО ИМЯ ИСТОРИИ</p>
@@ -578,7 +637,7 @@
                     </a>
 
                     <a href="https://www.sb.by/sp/citizenship/" class="carousel-slide project-card">
-                        <img src="./assets/img/projects/passport.jpg" alt="Белорусы+ проект">
+                        <img src="./assets/img/projects/passport.jpg" loading="lazy" alt="Белорусы+ проект">
                         <div class="project-info">
                             <h3>Белорусы+</h3>
                             <p>Новые граждане республики</p>
@@ -611,7 +670,7 @@
 
     <button class="back-to-top" id="backToTop">⇧</button>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js" hidden></script>
     <script>
         function loadYandexMetrika() {
             (function (m, e, t, r, i, k, a) {
