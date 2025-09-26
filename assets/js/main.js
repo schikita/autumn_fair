@@ -225,9 +225,7 @@ function updateOnScroll() {
 
 window.addEventListener("scroll", requestTick);
 
-console.log(
-  "🍂 Добро пожаловать на ярмарку! Сайт полностью загружен и готов к работе."
-);
+
 
 
 const projectsCarousel = document.querySelector(".carousel-track");
@@ -274,19 +272,25 @@ if (projectsCarousel) {
 }
 
 // Показать подсказку о прокрутке на мобильных устройствах
-        if (window.innerWidth <= 768) {
-            document.querySelector('.scroll-hint').style.display = 'block';
-        }
-        
-        // Скрыть подсказку при изменении размера окна
-        window.addEventListener('resize', function() {
-            const hint = document.querySelector('.scroll-hint');
-            if (window.innerWidth > 768) {
-                hint.style.display = 'none';
-            } else {
-                hint.style.display = 'block';
-            }
-        });
+if (window.innerWidth <= 768) {
+    const hint = document.querySelector('.scroll-hint');
+    if (hint) {
+        hint.style.display = 'block';
+    }
+}
+
+// Скрыть подсказку при изменении размера окна
+window.addEventListener('resize', function() {
+    const hint = document.querySelector('.scroll-hint');
+    if (!hint) return;
+
+    if (window.innerWidth > 768) {
+        hint.style.display = 'none';
+    } else {
+        hint.style.display = 'block';
+    }
+});
+
 
 
 document.querySelectorAll('.tab').forEach(tab => {
@@ -353,4 +357,10 @@ document.querySelectorAll('a[href="#target"]').forEach(link => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("loader").classList.add("hidden");
+  }, 3000); // 3000 мс = 3 секунды
 });
